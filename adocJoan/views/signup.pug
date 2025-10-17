@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Signup
+    link(rel="stylesheet" href="/CSS/signup.css")
+  body
+    div#successAlert.success-alert(style="display: none;")
+      p Account Created Successfully!
+
+    .signup-wrapper
+      form.signup-form#signupForm(action="/signup", method="POST", novalidate)
+        h2 Sign Up
+        
+        input.form-input#fullName(
+          type="text"
+          placeholder="Full Name"
+          name="fullName"
+          required
+        )
+        
+        input.form-input#email(
+          type="email"
+          placeholder="Email"
+          name="email"
+          required
+        )
+        
+        input.form-input#phoneNumber(
+          type="tel"
+          placeholder="Phone Number"
+          name="phoneNumber"
+          required
+        )
+        
+        input.form-input#password(
+          type="password"
+          placeholder="Password"
+          name="password"
+          required
+        )
+        
+        input.form-input#confirmPassword(
+          type="password"
+          placeholder="Confirm Password"
+          name="confirmPassword"
+          required
+        )
+        
+        button.signup-btn(type="submit") Sign Up
+        
+        p.login-prompt
+          | Have an account? 
+          a(href="/login") Login
+    
+script(src="/JS/signup.js")

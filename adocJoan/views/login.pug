@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Login
+    link(rel="stylesheet" href="/CSS/login.css")
+  body
+    .login-wrapper
+      form.login-form#loginForm(action="/login", method="POST", novalidate)
+        h2 Login
+        
+        input.form-input#email(
+          type="email"
+          placeholder="Email or Phone Number"
+          name="email"
+          required
+        )
+        
+        input.form-input#password(
+          type="password"
+          placeholder="Password"
+          name="password"
+          required
+        )
+        
+        button.login-btn(type="submit") LOGIN
+        
+        p.signup-prompt
+          | Don't have an account? 
+          a(href="/signup") -Signup
+    
+    div#successMessage.success-box(style="display: none;")
+      p Congs You've Successfully Logged In!
+    
+    script(src="/JS/login.js")
